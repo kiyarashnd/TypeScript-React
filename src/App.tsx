@@ -1,4 +1,5 @@
 import {Select}  from './Select'
+import {useState} from 'react'
 
 const options=[
   {label:"First",value:1},
@@ -8,9 +9,13 @@ const options=[
   {label:"Fifth",value:5},
 ]
 function App() {
-  return <>
-  <Select options={options}/>
+  const [value,setValue]=useState<typeof options[0] | undefined>(options[0])
+
+  return (
+  <>
+  <Select options={options} value={value} onChange={o=>setValue(o)}/>
   </>
+  )
 }
 
 export default App

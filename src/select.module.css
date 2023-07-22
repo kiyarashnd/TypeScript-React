@@ -73,11 +73,12 @@ z-index: 100;
     cursor: pointer;
 }
 
+/* here if selected come before highlited this gonna we different when we hover on items */
+.option.selected{
+    background-color: hsl(200,100%,70%);
+}
+
 .option.highlighted{
     background-color: hsl(200,100%,70%);
     color: white;
-}
-
-.option.selected{
-    background-color: hsl(200,100%,70%);
 }
