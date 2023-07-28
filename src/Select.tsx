@@ -22,6 +22,7 @@ type SelectProps = {
   options: selectOptions[];
 } & (singleSelectProps | MultipleSelectProps);
 
+// Select component
 export function Select({ multiple, value, onChange, options }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   //for highLite index when we hover on any item on list
